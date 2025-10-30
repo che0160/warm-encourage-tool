@@ -12,7 +12,7 @@ dist/
 
 # PyInstaller
 *.manifest
-*.spec
+温暖鼓励小工具.spec
 
 # Buildozer打包文件
 .buildozer/
