@@ -1,0 +1,91 @@
+========================================
+温暖鼓励小工具 - GitHub上传操作清单
+========================================
+
+你的GitHub信息：
+- 用户名：che0160
+- 邮箱：2183321847@qq.com
+- 仓库名：warm-encourage-tool
+
+========================================
+操作步骤（按顺序执行）
+========================================
+
+□ 步骤1：创建GitHub仓库（5分钟）
+   1. 访问：https://github.com/new
+   2. Repository name 填写：warm-encourage-tool
+   3. 选择：Public（公开）
+   4. 不要勾选任何初始化选项
+   5. 点击：Create repository
+
+□ 步骤2：获取Personal Access Token（5分钟）
+   1. 访问：https://github.com/settings/tokens
+   2. 点击：Generate new token (classic)
+   3. Note 填写：warm-encourage-tool
+   4. Expiration 选择：No expiration 或 90 days
+   5. 勾选：repo（完整权限）
+   6. 点击：Generate token
+   7. 立即复制Token（只显示一次！）
+   8. 保存到记事本
+
+□ 步骤3：上传代码到GitHub（2分钟）
+   1. 重新打开一个新的PowerShell窗口（重要！刷新环境变量）
+   2. 双击运行：上传到GitHub.bat
+   3. 等待脚本执行
+   4. 提示输入用户名：che0160
+   5. 提示输入密码：粘贴刚才的Token
+   6. 等待推送完成
+
+□ 步骤4：查看自动构建APK（等待30-60分钟）
+   1. 访问：https://github.com/che0160/warm-encourage-tool
+   2. 点击：Actions 标签
+   3. 查看：Build Android APK 工作流
+   4. 等待构建完成（显示绿色✓）
+   5. 点击已完成的工作流
+   6. 下载：Artifacts 中的 android-apk
+
+========================================
+重要提示
+========================================
+
+1. ⚠️ 必须重新打开PowerShell窗口！
+   - Git刚安装完，当前窗口还不能识别git命令
+   - 关闭所有PowerShell窗口，重新打开一个新的
+
+2. ⚠️ Token不是密码！
+   - 推送时不要输入你的GitHub密码
+   - 必须使用刚才生成的Personal Access Token
+
+3. ⚠️ Token只显示一次！
+   - 生成后立即复制保存
+   - 如果忘记了，需要重新生成
+
+========================================
+快速链接
+========================================
+
+创建仓库：
+https://github.com/new
+
+获取Token：
+https://github.com/settings/tokens
+
+你的仓库（创建后）：
+https://github.com/che0160/warm-encourage-tool
+
+Actions构建页面（推送后）：
+https://github.com/che0160/warm-encourage-tool/actions
+
+========================================
+需要帮助？
+========================================
+
+详细教程：
+- 打开：获取GitHub_Token指南.md
+
+常见问题：
+- 推送失败：检查仓库是否已创建
+- 认证失败：检查Token是否正确
+- git命令不存在：重新打开PowerShell窗口
+
+========================================

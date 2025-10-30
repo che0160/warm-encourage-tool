@@ -1,0 +1,5 @@
+# 本项目主要使用Python标准库，无需额外安装依赖
+# tkinter - Python内置GUI库（通常随Python一起安装）
+
+# 打包exe所需的工具
+pyinstaller==6.3.0

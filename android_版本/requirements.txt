@@ -1,0 +1,9 @@
+# Kivy框架 - 用于Android应用开发
+kivy==2.3.0
+
+# Buildozer - 用于打包Android APK
+# 注意：Buildozer只能在Linux或macOS上运行，Windows用户需要使用WSL或虚拟机
+buildozer==1.5.0
+
+# Cython - Kivy的依赖
+Cython==0.29.36
