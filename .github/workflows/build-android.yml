@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     
     steps:
     - name: 检出代码
@@ -21,7 +22,21 @@ jobs:
     - name: 安装系统依赖
       run: |
         sudo apt update
-        sudo apt install -y openjdk-11-jdk build-essential git zip unzip
+        sudo apt install -y \
+          openjdk-11-jdk \
+          build-essential \
+          git \
+          zip \
+          unzip \
+          ccache \
+          libncurses5:i386 \
+          libstdc++6:i386 \
+          zlib1g:i386 \
+          libffi-dev \
+          libssl-dev \
+          python3-pip \
+          autoconf \
+          libtool
     
     - name: 安装Python依赖
       run: |
@@ -29,18 +44,21 @@ jobs:
         pip install buildozer cython==0.29.36
     
     - name: 构建APK
-      working-directory: ./android_版本
       run: |
-        buildozer android debug
+        cd "android_版本"
+        yes | buildozer android debug || buildozer android debug
     
     - name: 上传APK
       uses: actions/upload-artifact@v3
       with:
         name: android-apk
         path: android_版本/bin/*.apk
+        if-no-files-found: error
         
     - name: 创建Release（可选）
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
         files: android_版本/bin/*.apk
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
