@@ -22,7 +22,7 @@ version = 1.0
 requirements = python3,kivy
 
 # 支持的Android架构（arm64-v8a是现代手机常用架构）
-android.archs = arm64-v8a,armeabi-v7a
+android.archs = arm64-v8a
 
 # Android权限（根据需要添加）
 # android.permissions = INTERNET
